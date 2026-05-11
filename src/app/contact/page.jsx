@@ -1,9 +1,12 @@
+import ContactForm from "@/components/contact/ContactForm";
+import ContactHero from "@/components/contact/ContactHero";
 import { createPageMetadata } from "@/lib/seo";
 
 const ContactPage = () => {
   return (
     <>
-      Contact
+      <ContactHero/>
+      <ContactForm/>
     </>
   );
 };

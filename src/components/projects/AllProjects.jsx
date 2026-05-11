@@ -63,21 +63,38 @@ const projectsData = [
         },
         cover_img: "	https://framerusercontent.com/images/AjyOKPTn7UiU9g7Vfpsv1y1nL7M.jpg?scale-down-to=1024"
     },
+    {
+        id: 4,
+        title: "Skyline Heights Residential Tower",
+        description:
+            "A luxury residential tower that combines elegance with energy efficiency.",
+        location: "Mumbai, Maharashtra, India",
+        typeOfWork: "Residential Design",
+        completionDate: "Mar 15, 2023",
+        tags: [
+            "300,000 SQ.FT",
+            "LEED Certified",
+            "Smart Home Tech",
+            "Panoramic Views",
+        ],
+        cta: {
+            primary: "Learn More",
+            secondary: "View on Maps",
+        },
+        cover_img: "https://framerusercontent.com/images/NSV0AlP3aQnPRuWY6OR8zdbno.jpg?scale-down-to=1024"
+    },
 ];
-const KeyProjects = () => {
+const AllProjects = () => {
     return (
         <>
-            <div className="container px-7">
+            <div className="container py-50 px-7">
                 <div className="w-full max-w-298 gap-y-20 flex flex-col text-center items-center mx-auto">
                     <div className="gap-y-6 items-center flex flex-col ">
                         <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
                             <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
                             <p className='leading-0 text-[#f2f2f2]'>our projects</p>
                         </div>
-                        <h2 className=' leading-none text-[#f2f2f2]'>Innovative Projects, <br /> Lasting Impact</h2>
-                        <button className="uppercase text-sm bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
-                            view all projects
-                        </button>
+                        <h2 className=' leading-none text-[#f2f2f2]'>Showcase of Our <br /> Design Excellence</h2>
                     </div>
                     <div className="space-y-1">
                         {projectsData.map((project, index) => {
@@ -164,4 +181,4 @@ const KeyProjects = () => {
     )
 }
 
-export default KeyProjects
+export default AllProjects

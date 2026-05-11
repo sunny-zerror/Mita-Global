@@ -1,17 +1,21 @@
 import { Link } from 'next-view-transitions'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Footer = () => {
+  const pathname = usePathname()
+
   return (
-    <div>
+    <>
       <div className="container space-y-1 px-1.25">
+        {pathname !== '/contact' && (
         <div className="w-full flex min-h-180 gap-1 h-screen">
           <div className="w-1/2 border overflow-hidden border-[#AACFDE] h-full relative py-20 px-6 ">
             <div className=" relative overflow-hidden z-10 gap-y-6 text-center items-center flex flex-col ">
-              <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
+              <button className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
                 <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
                 <p className='leading-0 text-[#f2f2f2]'>Our services</p>
-              </div>
+              </button>
               <h2 className=' leading-none text-[#f2f2f2]'>Your Vision,<br /> Our Expertise</h2>
               <button className="uppercase text-sm bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
                 discover services
@@ -21,7 +25,7 @@ const Footer = () => {
             <div
               style={{
                 background:
-                  "linear-gradient(180deg, var(#0f121980 ,rgba(18, 44, 95, 0.5) 0%,rgba(7, 24, 57, 0) 100%)",
+                  "linear-gradient(180deg,#0f121980 ,rgba(18, 44, 95, 0.5) 0%,rgba(7, 24, 57, 0) 100%)",
               }}
               className="overlay absolute inset-px z-1 overflow-hidden"
             />
@@ -41,21 +45,22 @@ const Footer = () => {
             <div
               style={{
                 background:
-                  "linear-gradient(180deg,var(#0f121980 , rgba(18, 44, 95, 0.5) 0%, rgba(7, 24, 57, 0) 100%)",
+                  "linear-gradient(180deg ,#0f121980 , rgba(18, 44, 95, 0.5) 0%, rgba(7, 24, 57, 0) 100%)",
               }}
               className="overlay absolute inset-px z-1 overflow-hidden "
             />
           </div>
         </div>
+        )}
 
         <div className="w-full space-y-50 relative bg-[#f2f2f2] pb-3 p-10">
 
           <div className="w-full grid px-10 h-full  pointer-events-none grid-cols-4 z-10 absolute inset-0">
-              <div className="border-l h-full border-[#0f12191a]"></div>
-              <div className="border-l h-full border-[#0f12191a]"></div>
-              <div className="border-l h-full border-[#0f12191a]"></div>
-              <div className="border-l h-full border-[#0f12191a]"></div>
-            </div>
+            <div className="border-l h-full border-[#0f12191a]"></div>
+            <div className="border-l h-full border-[#0f12191a]"></div>
+            <div className="border-l h-full border-[#0f12191a]"></div>
+            <div className="border-l h-full border-[#0f12191a]"></div>
+          </div>
 
           <div className="w-full grid grid-cols-4">
             <div className=" pl-2 flex flex-col justify-between">
@@ -104,7 +109,7 @@ const Footer = () => {
         </div>
 
       </div>
-    </div>
+    </>
   )
 }
 

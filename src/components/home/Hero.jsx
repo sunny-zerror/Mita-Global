@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-      <div className="w-full h-screen relative bg-[#dadada]">
+      <div className="w-full h-screen relative bg-[#F2F2F2]">
         <div className="container">
           <div className=" relative z-100 flex flex-col justify-end w-full h-full">
             <div className="w-full grid p-10 pt-[5.2rem] pb-[11.5rem] pointer-events-none grid-cols-4 z-10 absolute inset-0">
@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div style={{ background: "linear-gradient(180deg, #dadada 0%, #5a6b73 100%)" }}>
+      <div style={{ background: "linear-gradient(180deg, #F2F2F2 0%, #5a6b73 100%)" }}>
         <div className="container pt-1 h-screen relative overflow-hidden grid grid-cols-2">
           <div className="h-full w-[calc(100%-4px)]">
             <video className='cover hue-rotate-354 saturate-[0.33]' loop muted playsInline autoPlay src="https://cdn.prod.website-files.com/66d5dc578fecb86ebbccb71c%2F66d6d93acbd84d209f5b5116_7065796-uhd_2160_3840_24fps-transcode.mp4"></video>

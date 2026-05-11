@@ -29,7 +29,7 @@ const Highlights = () => {
     ];
 
     return (
-        <div>
+        <>
             <div className="container pt-50 px-7">
                 <div className="w-full max-w-240 space-y-20 mx-auto">
                     <div className="w-full flex items-end justify-between">
@@ -69,9 +69,8 @@ const Highlights = () => {
                         ))}
                     </div>
                 </div>
-
             </div>
-        </div>
+        </>
     )
 }
 

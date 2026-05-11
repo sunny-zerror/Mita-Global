@@ -7,7 +7,7 @@ const navItems = [
     { title: "Mita Realty", href: "/mita-realty" },
   ],
   [
-    { title: "Marquee Projects", href: "/projects" },
+    { title: "Marquee Projects", href: "/marquee-projects" },
     { title: "Mita Energy", href: "/mita-energy" },
   ],
   [
