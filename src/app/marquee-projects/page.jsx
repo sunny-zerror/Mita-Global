@@ -10,7 +10,6 @@ const page = () => {
         blinkBtnText="Portfolio"
         title="Gallery of Our Signature Projects"
         description="Browse our portfolio to see a collection of innovative and impactful projects that highlight our architectural expertise."
-        btnText="get in touch"
       />
       <AboutImage img="https://framerusercontent.com/images/m0alTV7gdqjPGA1LNtWL5pRXe8.jpg" />
         <AllProjects/>

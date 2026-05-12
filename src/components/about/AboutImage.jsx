@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutImage = ({img}) => {
+const AboutImage = ({ img }) => {
     return (
         <>
             <div className="container">

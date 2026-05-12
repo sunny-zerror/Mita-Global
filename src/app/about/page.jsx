@@ -13,7 +13,6 @@ const AboutPage = () => {
         blinkBtnText="About Mita Group"
         title="Crafting Spaces, Shaping Visions"
         description="The Mita Group is a leading provider of innovative and sustainable construction solutions, offering a wide range of projects across various sectors."
-        btnText="Our services"
       />
       <AboutImage img="	https://framerusercontent.com/images/wXngEhRqzHuClHdgKenqpshI7A.jpg?scale-down-to=2048" />
       <OurPurpose />

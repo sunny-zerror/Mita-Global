@@ -4,7 +4,7 @@ import React from "react";
 const navItems = [
   [
     { title: "About", href: "/about" },
-    { title: "Mita Realty", href: "/mita-realty" },
+    { title: "Mita Realty", href: "/mita-reality" },
   ],
   [
     { title: "Marquee Projects", href: "/marquee-projects" },

@@ -48,3 +48,38 @@ button {
   max-width: 1928px;
   margin-inline: auto;
 }
+
+
+/* globals.css */
+
+@keyframes pageBlurIn {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+::view-transition-old(root) {
+  animation: fadeOut 1s ease forwards;
+}
+
+::view-transition-new(root) {
+  animation: pageBlurIn 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
