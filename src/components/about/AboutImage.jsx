@@ -28,7 +28,7 @@ const AboutImage = ({ img }) => {
     return (
         <>
             <div ref={imgParentRef}  className="container">
-                <div className="w-full overflow-hidden  bg-red-800 aspect-video mt-1 ">
+                <div className="w-full overflow-hidden  aspect-video mt-1 ">
                     <img className=' full_img cover saturate-[0.33]' src={img} alt="" />
                 </div>
             </div>
