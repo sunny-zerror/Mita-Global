@@ -78,12 +78,15 @@ const Hero = () => {
     tl.to(".hero_video", {
       opacity: 0.25,
     }, "<");
+    tl.to(homeRef.current, {
+      pointerEvents:"auto"
+    }, "<");
 
   });
 
   return (
     <>
-      <div ref={homeRef} className="w-full overflow-hidden h-screen relative bg-[#F2F2F2]">
+      <div ref={homeRef} className="w-full pointer-events-none overflow-hidden h-screen relative bg-[#F2F2F2]">
         <div className="container">
           <div className=" relative z-100 flex flex-col justify-end w-full h-full">
             <div className="w-full grid p-10 pt-[4.7rem] pb-0 pointer-events-none grid-cols-4 z-10 absolute inset-0">
