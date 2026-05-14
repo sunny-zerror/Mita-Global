@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import BlinkButton from "../common/BlinkButton";
+import Button from "../common/Button";
 
 const faqData = [
     {
@@ -102,19 +104,11 @@ const Faq = () => {
         <div className="container py-50 px-7">
             <div className="w-full max-w-240 gap-y-20 flex flex-col text-center items-center mx-auto">
                 <div className="gap-y-6 items-center flex flex-col">
-                    <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3 pb-2 leading-none border-[#f2f2f21a]">
-                        <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
+                    <BlinkButton text="faq"  />
 
-                        <p className="leading-0 text-[#f2f2f2]">faq</p>
-                    </div>
-
-                    <h2 className="leading-none text-[#f2f2f2]">
+                    <h2  data-text-effect className="leading-none text-[#f2f2f2]">
                         Quick Answers to <br /> Common Questions
                     </h2>
-
-                    <button className="uppercase text-sm bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
-                        browse all
-                    </button>
                 </div>
 
                 <div className="w-full text-start gap-2 flex">

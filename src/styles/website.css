@@ -10,9 +10,20 @@
   70% {
     opacity: 1;
   }
-
 }
 
 .animate-blink {
   animation: blink 1.5s linear infinite;
+}
+
+.line-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+  display: block;
+}
+.split-line {
+  display: block;
+  text-align: inherit;
+  will-change: transform;
 }

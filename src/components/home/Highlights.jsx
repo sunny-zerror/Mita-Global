@@ -1,4 +1,6 @@
 import React from 'react'
+import BlinkButton from '../common/BlinkButton';
+import Button from '../common/Button';
 
 const Highlights = () => {
 
@@ -34,15 +36,10 @@ const Highlights = () => {
                 <div className="w-full max-w-240 space-y-20 mx-auto">
                     <div className="w-full flex items-end justify-between">
                         <div className="text-[#f2f2f2] space-y-4">
-                            <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
-                                <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
-                                <p className='leading-0 text-[#f2f2f2]'>Highlights</p>
-                            </div>
-                            <h2 className='leading-none'>Why Choose Mita <br /> Group?</h2>
+                            <BlinkButton text="Highlights" />
+                            <h2  data-text-effect className='leading-none'>Why Choose Mita <br /> Group?</h2>
                         </div>
-                        <button className="uppercase  block h-fit text-xs bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
-                            Get in Touch
-                        </button>
+                        <Button text="Get in Touch" link="/contact" theme='light' />
                     </div>
                     <div className="w-full space-y-15">
                         {statsData.map((item) => (
@@ -51,7 +48,7 @@ const Highlights = () => {
                                 className="w-full border-t border-[#f2f2f21a] flex"
                             >
                                 <div className="w-[60%]">
-                                    <p className="text-[10.5rem] leading-36 heading-font text-[#f2f2f233]">
+                                    <p  data-text-effect className="text-[10.5rem] leading-36 heading-font text-[#f2f2f233]">
                                         {item.number}
                                     </p>
                                 </div>

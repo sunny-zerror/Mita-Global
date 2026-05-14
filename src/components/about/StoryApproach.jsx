@@ -42,7 +42,7 @@ const StoryApproach = () => {
                     <div className="w-full flex items-end justify-between">
                         <div className="text-[#f2f2f2] space-y-4">
                             <BlinkButton text="story & approach" />
-                            <h2 className='leading-none'>How We Began and <br /> Where We’re Going</h2>
+                            <h2 data-text-effect className='leading-none'>How We Began and <br /> Where We’re Going</h2>
                         </div>
                     </div>
                     <div className="w-full overflow-hidden rounded-xl border">

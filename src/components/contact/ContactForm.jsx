@@ -10,11 +10,11 @@ const ContactForm = () => {
                 <div className="w-full flex gap-1 items-stretch ">
                     <div className="w-[calc(50%-4px)]">
                         <div className="w-full h-full">
-                        <img className='cover saturate-[0.33]' src="https://framerusercontent.com/images/mnJ2Ynf49fxGe22kCXEiF0H4Zg.jpg" alt="" />
+                            <img data-img-effect className='cover saturate-[0.33]' src="https://framerusercontent.com/images/mnJ2Ynf49fxGe22kCXEiF0H4Zg.jpg" alt="" />
                         </div>
                     </div>
                     <div className="w-[calc(50%-4px)] bg-[#f2f2f2] space-y-8 h-full relative pt-8 pr-6 pb-12 pl-6">
-                        <h2 className='leading-none'>Share Your <br />Vision with Us</h2>
+                        <h2 data-text-effect className='leading-none'>Share Your <br />Vision with Us</h2>
                         <form className="space-y-6">
                             <div className="space-y-2">
                                 <label className="text-xs font-medium uppercase  text-[#0f1219b3]">
@@ -94,7 +94,7 @@ const ContactForm = () => {
                         </form>
                         <button
                             type="submit"
-                            className="flex  w-full items-center justify-center bg-[#020817] text-xs py-4 uppercase  text-[#f2f2f2] transition-all duration-300 hover:bg-[#8888881a]"
+                            className="flex  w-full border border-transparent hover:border-[#0f1219] hover:text-[#0f1219] items-center justify-center bg-[#0f1219] text-sm py-5 pb-4  leading-none uppercase  text-[#f2f2f2] transition-all duration-300 hover:bg-[#8888881a]"
                         >
                             Send a Message
                         </button>

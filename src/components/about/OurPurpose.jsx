@@ -31,7 +31,7 @@ const OurPurpose = () => {
           <div className="w-full flex gap-y-16  text-[#f2f2f2] flex-col justify-center items-center relative z-10">
             <div className="space-y-4 flex flex-col items-center">
               <BlinkButton text="OUR PURPOSE" />
-              <h2 className='leading-none text-center'>With a focus on creativity and <br /> precision, we transform visions <br /> into enduring designs.</h2>
+              <h2 data-text-effect className='leading-none text-center'>With a focus on creativity and <br /> precision, we transform visions <br /> into enduring designs.</h2>
             </div>
 
             <div className="relative max-w-240 z-10 grid grid-cols-1 md:grid-cols-3 gap-2">

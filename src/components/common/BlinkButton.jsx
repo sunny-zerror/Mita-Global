@@ -8,7 +8,7 @@ const BlinkButton = ({
   return (
     <button
       className={`
-        border whitespace-nowrap uppercase text-xs w-fit
+        border pointer-events-none whitespace-nowrap uppercase text-xs w-fit
         flex items-center gap-x-2 p-2 pb-1 leading-none
         transition-colors duration-300
         ${isLight

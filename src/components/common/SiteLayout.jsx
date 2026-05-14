@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ViewTransitions } from "next-view-transitions";
+import GlobalImgReveal from "../animation/GlobalImgReveal";
+import GlobalTextReveal from "../animation/GlobalTextReveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +33,8 @@ export default function SiteLayout({ children }) {
     <ViewTransitions>
       <LenisScroll>
 
+        <GlobalImgReveal />
+        <GlobalTextReveal/>
         <div className="w-screen pointer-events-none h-screen fixed  z-100000">
           <div className="border-5 border-[#acbbc2] w-full h-full"></div>
         </div>

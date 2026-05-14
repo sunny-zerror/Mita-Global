@@ -1,6 +1,7 @@
 import React from 'react'
 import BlinkButton from '../common/BlinkButton'
 import Button from '../common/Button'
+import HoverLink from '../common/HoverLink'
 
 const resourcesData = [
     {
@@ -76,7 +77,7 @@ const ExpertHub = () => {
                     <div className="w-full flex items-end justify-between">
                         <div className="text-[#f2f2f2] space-y-4">
                             <BlinkButton text="Expert Hub" />
-                            <h2 className='leading-none'>Knowledge and <br /> Resources Center</h2>
+                            <h2 data-text-effect className='leading-none'>Knowledge and <br /> Resources Center</h2>
                         </div>
                         <Button text="About Us" />
                     </div>
@@ -94,7 +95,7 @@ const ExpertHub = () => {
                                     {section.items.map((item, index) => (
                                         <div
                                             key={index}
-                                            className=" bg-[#0f1219]  px-6 py-7 flex rounded-lg flex-col justify-between"
+                                            className=" group bg-[#0f1219] hover:opacity-85 transition-all duration-300  px-6 py-7 flex rounded-lg flex-col justify-between"
                                         >
                                             <div className="space-y-12">
                                                 <div className="w-fit border border-[#f2f2f21a] bg-[#f2f2f208] px-3 leading-none pt-2 pb-1">
@@ -105,10 +106,7 @@ const ExpertHub = () => {
                                                 </div>
 
                                                 <div className="space-y-2 max-w-80">
-                                                    <p className="text-[#f2f2f2] text-sm uppercase leading-none">
-                                                        {item.title}
-                                                    </p>
-
+                                                    <HoverLink text={item.title} color='light' className='text-[#f2f2f2] text-sm' />
                                                     <p className="text-sm text-[#f2f2f2b3] leading-none">
                                                         {item.description}
                                                     </p>

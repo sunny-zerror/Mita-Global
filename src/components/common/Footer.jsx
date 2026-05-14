@@ -1,6 +1,9 @@
 import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import Button from './Button'
+import BlinkButton from './BlinkButton'
+import HoverLink from './HoverLink'
 
 const Footer = () => {
   const pathname = usePathname()
@@ -13,14 +16,9 @@ const Footer = () => {
           <div className="w-full flex min-h-180 gap-1 h-screen">
             <div className="w-1/2 border overflow-hidden border-[#AACFDE] h-full relative py-20 px-6 ">
               <div className=" relative overflow-hidden z-10 gap-y-6 text-center items-center flex flex-col ">
-                <button className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
-                  <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
-                  <p className='leading-0 text-[#f2f2f2]'>Our services</p>
-                </button>
-                <h2 className=' leading-none text-[#f2f2f2]'>Your Vision,<br /> Our Expertise</h2>
-                <button className="uppercase text-sm bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
-                  discover services
-                </button>
+                <BlinkButton text="Our services" />
+                <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Your Vision,<br /> Our Expertise</h2>
+                <Button text={" discover services"} link="/mita-reality" theme='light' />
               </div>
               <img className=' absolute inset-0 cover opacity-60' src="https://framerusercontent.com/images/jG0gTrF5I8WGrAkR4tfkpyL29Y.jpg" alt="" />
               <div
@@ -33,14 +31,9 @@ const Footer = () => {
             </div>
             <div className="w-1/2 border overflow-hidden border-[#9BC6DE] h-full relative py-20 px-6 ">
               <div className=" relative overflow-hidden z-10 gap-y-6 text-center items-center flex flex-col ">
-                <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
-                  <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
-                  <p className='leading-0 text-[#f2f2f2]'>Contact us</p>
-                </div>
-                <h2 className=' leading-none text-[#f2f2f2]'>Let's  Start the <br /> Conversation</h2>
-                <button className="uppercase text-sm bg-[#f2f2f2] text-[#0f1219] w-fit p-3 leading-none">
-                  Get in touch
-                </button>
+                <BlinkButton text="Contact us" />
+                <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Let's  Start the <br /> Conversation</h2>
+                <Button text={"Get in touch"} link="/contact" theme='light' />
               </div>
               <img className=' absolute inset-0 cover opacity-60' src="https://framerusercontent.com/images/OKAcWplwGhYkcT0cWCQCBBS3M.jpg?scale-down-to=2048" alt="" />
               <div
@@ -65,7 +58,7 @@ const Footer = () => {
 
           <div className="w-full grid grid-cols-4">
             <div className=" pl-2 flex flex-col justify-between">
-              <div className=" w-full space-x-5">
+              <div className={` ${pathname === "/" && "pointer-events-none"} w-full space-x-5`}>
                 <Link href="/">
                   <img
                     className="w-24 brightness-0 object-contain"
@@ -76,31 +69,31 @@ const Footer = () => {
                 </Link>
                 <p className='text-[#0f1219b3] uppercase text-xs leading-none w-1/2'>We create innovative architectural solutions that inspire and endure.</p>
               </div>
-              <p className='text-[#0f1219b3] uppercase text-xs leading-none w-1/2'>© 2024, Mita</p>
+              <p className='text-[#0f1219b3] uppercase text-xs leading-none w-1/2'>© {new Date().getFullYear()}, Mita</p>
             </div>
 
             <div className="pl-3 space-y-4">
               <p className='text-[#0f1219b3] text-xs uppercase'>overview</p>
               <div className=" text-2xl capitalize flex flex-col gap-y-1.5">
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/about"}>about</Link>
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/marquee-projects"}>projects</Link>
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/mita-reality"}>services</Link>
+                <Link className='group' href={"/about"}> <HoverLink text="about" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/marquee-projects"}> <HoverLink text="projects" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/mita-reality"}> <HoverLink text="services" className='text-2xl capitalize' /></Link>
               </div>
             </div>
             <div className="pl-3 space-y-4">
               <p className='text-[#0f1219b3] text-xs uppercase'>engage</p>
               <div className=" text-2xl capitalize flex flex-col gap-y-1.5">
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/news"}>news</Link>
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/resources"}>resources</Link>
-                <Link className='hover:opacity-60 transition-all duration-200' href={"/contact"}>contact us</Link>
+                <Link className='group' href={"/news"}> <HoverLink text="news" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/resources"}> <HoverLink text="resources" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/contact"}> <HoverLink text="contact" className='text-2xl capitalize' /></Link>
               </div>
             </div>
             <div className="pl-3 space-y-4">
               <p className='text-[#0f1219b3] text-xs uppercase'>follow us</p>
-              <div className=" text-2xl capitalize gap-y-1.5">
-                <p>linked in</p>
-                <p>X (Twitter)</p>
-                <p>instagram</p>
+              <div className=" text-2xl capitalize flex flex-col gap-y-1.5">
+                <Link className='group' href={"/"}> <HoverLink text="linked in" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/"}> <HoverLink text="X (Twitter)" className='text-2xl capitalize' /></Link>
+                <Link className='group' href={"/"}> <HoverLink text="instagram" className='text-2xl capitalize' /></Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import BlinkButton from '../common/BlinkButton';
+import Button from '../common/Button';
 
 const projectsData = [
     {
@@ -90,11 +92,8 @@ const AllProjects = () => {
             <div className="container py-50 px-7">
                 <div className="w-full max-w-298 gap-y-20 flex flex-col text-center items-center mx-auto">
                     <div className="gap-y-6 items-center flex flex-col ">
-                        <div className="border bg-[#f2f2f208] whitespace-nowrap uppercase text-sm w-fit flex items-center gap-x-2 p-3  pb-2  leading-none border-[#f2f2f21a]">
-                            <span className="size-1 -translate-y-px rounded-full bg-[#f2f2f2] animate-blink" />
-                            <p className='leading-0 text-[#f2f2f2]'>our projects</p>
-                        </div>
-                        <h2 className=' leading-none text-[#f2f2f2]'>Showcase of Our <br /> Design Excellence</h2>
+                        <BlinkButton text="our projects" />
+                        <h2 data-text-effect className=' text-center leading-none text-[#f2f2f2]'>Showcase of Our <br /> Design Excellence</h2>
                     </div>
                     <div className="space-y-1">
                         {projectsData.map((project, index) => {
@@ -153,19 +152,14 @@ const AllProjects = () => {
                                             </div>
                                         </div>
 
-                                        <div className="w-full flex gap-x-4 items-center">
-                                            <button className="uppercase text-xs bg-[#0f1219] text-[#f2f2f2] w-fit p-3 leading-none">
-                                                {project.cta.primary}
-                                            </button>
-
-                                            <p className="text-xs uppercase">
-                                                {project.cta.secondary}
-                                            </p>
+                                        <div className="w-full flex gap-x-4 text-xs! items-center">
+                                            <Button text={project.cta.primary} link={project.cta.secondary} theme='dark' className='text-xs pb-2.5' />
                                         </div>
                                     </div>
 
                                     <div className="w-full h-full relative shrink-0 max-sm:h-142 overflow-hidden md:w-1/2 xl:w-[60%]">
                                         <img
+                                        data-img-effect
                                             className="cover saturate-[0.33]"
                                             src={project.cover_img}
                                             alt={project.title}

@@ -1,5 +1,9 @@
 import { Link } from "next-view-transitions";
 import React from "react";
+import HoverLink from "./HoverLink";
+import { usePathname } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const navItems = [
   [
@@ -17,14 +21,31 @@ const navItems = [
 ];
 
 const Header = () => {
+  const pathname = usePathname()
+
+  useGSAP(() => {
+    if (pathname === "/") {
+      gsap.set(".header", { opacity: 0 });
+
+      gsap.to("header", {
+        opacity: 1,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: 2.75
+      })
+    } else {
+      gsap.to(".header", { opacity: 1, duration: 0.5, ease: "power3.out", });
+    }
+  }, [pathname]);
+
   return (
-    <header className=" container bg-transparent! w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-10 pb-3.5 py-6">
+    <header className=" header opacity-0 container bg-transparent! w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-10 pb-3.5 py-6">
       <div className="grid grid-cols-2 md:grid-cols-4  items-start">
 
-        <div className=" w-full">
+        <div className={` ${pathname === "/" && "pointer-events-none"} w-full`}>
           <Link href="/">
             <img
-              className="w-24 brightness-0 object-contain"
+              className="w-24 hover:opacity-65 transition-all duration-300 brightness-0 object-contain"
               src="/logo.avif"
               alt="Mita Logo"
               loading="eager"
@@ -33,17 +54,14 @@ const Header = () => {
         </div>
 
         {navItems.map((group, index) => (
-          <div key={index} className="space-y-1">
+          <div key={index} className="space-y-2">
             {group.map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className="block w-fit"
+                className={`block group w-fit ${pathname === item.href && "pointer-events-none"}`}
               >
-                <p className="text-sm relative uppercase group flex items-center overflow-hidden cursor-pointer transition-all duration-300 hover:pl-3 hover:gap-x-1">
-                  <span className="absolute -left-2 group-hover:left-0 size-1.5  transition-all duration-300 bg-[#0f1219]" />
-                  {item.title}
-                </p>
+                <HoverLink text={item.title} />
               </Link>
             ))}
           </div>
