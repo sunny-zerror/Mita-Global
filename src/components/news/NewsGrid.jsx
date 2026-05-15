@@ -39,8 +39,10 @@ const NewsGrid = () => {
                     <div className="w-full grid gap-1 grid-cols-2">
                         {news.map((item, index) => (
                             <div key={index} className=" group cursor-pointer w-full flex flex-col items-stretch gap-1 ">
-                                <div className="h-120 overflow-hidden w-full">
-                                    <img data-img-effect className=' group-hover:scale-105! transition-all duration-300 cover saturate-[0.33]' src={item.cover_img} alt="" />
+                               <div className="h-120 overflow-hidden w-full">
+                                    <div data-img-effect className="w-full h-full overflow-hidden">
+                                        <img className=' group-hover:scale-105! transition-all duration-300 cover saturate-[0.33]' src={item.cover_img} alt="" />
+                                    </div>
                                 </div>
                                 <div className=" relative overflow-hidden  px-6 space-y-2 flex-1 py-7 text-start bg-[#0f1219] group-hover:bg-[#acbbc2] transition-all duration-300">
                                     <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">

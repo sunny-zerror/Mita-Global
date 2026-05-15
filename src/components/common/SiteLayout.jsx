@@ -29,12 +29,19 @@ export default function SiteLayout({ children }) {
     return () => clearTimeout(timeout);
   }, [pathname]);
 
+  useEffect(() => {
+    if (pathname.startsWith("/news/")) gsap.to("body", { backgroundColor: "#0f1219", });
+    else {
+      gsap.to("body", { backgroundColor: "#5a6b73", });
+    }
+  }, [pathname])
+  
   return (
     <ViewTransitions>
       <LenisScroll>
 
         <GlobalImgReveal />
-        <GlobalTextReveal/>
+        <GlobalTextReveal />
         <div className="w-screen pointer-events-none h-screen fixed  z-100000">
           <div className="border-5 border-[#acbbc2] w-full h-full"></div>
         </div>

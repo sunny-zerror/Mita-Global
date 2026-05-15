@@ -3,7 +3,7 @@ import BlinkButton from '../common/BlinkButton'
 import Button from '../common/Button'
 import { Link } from 'next-view-transitions'
 
-const News = () => {
+const OtherNews = () => {
 
     const news = [
         {
@@ -20,29 +20,22 @@ const News = () => {
             date: "Aug 1, 2023",
             cover_img: "https://framerusercontent.com/images/QPJ1NKzMlgImFCPzetHaVtJof0.jpg?scale-down-to=2048"
         },
-        {
-            id: 3,
-            title: "Mita Steel Global: A Leader in Tubular Solutions",
-            slug: "mita-steel-global-a-leader-in-tubular-solutions",
-            date: "Apr 15, 2023",
-            cover_img: "https://framerusercontent.com/images/vRQLOx1DYzjgGSte06vYsbkEYk.jpg?scale-down-to=4096"
-        },
     ]
 
     return (
         <>
-            <div className="container py-50 px-7">
+            <div className="container pb-50 px-7">
                 <div className="w-full max-w-298 gap-y-20 flex flex-col text-center items-center mx-auto">
                     <div className="gap-y-6 items-center flex flex-col ">
-                        <BlinkButton text={"News"} />
-                        <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Latest Updates and <br /> Insights from Our <br /> Firm</h2>
+                        <BlinkButton text={"other News"} />
+                        <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Check Out Other  <br /> Related Articles</h2>
                         <Button text=" browse all" link="/news" theme='light' />
                     </div>
 
-                    <div className="w-full grid gap-1 grid-cols-3">
+                    <div className="w-full grid gap-1 grid-cols-2">
                         {news.map((item, index) => (
                             <Link href={`/news/${item.slug}`} key={index} className=" group cursor-pointer w-full flex flex-col items-stretch gap-1 ">
-                                <div className="h-120 overflow-hidden w-full">
+                               <div className="h-120 overflow-hidden w-full">
                                     <div data-img-effect className="w-full h-full overflow-hidden">
                                         <img className=' group-hover:scale-105! transition-all duration-300 cover saturate-[0.33]' src={item.cover_img} alt="" />
                                     </div>
@@ -69,4 +62,4 @@ const News = () => {
     )
 }
 
-export default News
+export default OtherNews

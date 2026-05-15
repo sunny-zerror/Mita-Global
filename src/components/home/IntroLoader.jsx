@@ -24,36 +24,44 @@ const IntroLoader = () => {
             duration: 1.1,
             transform: "translate(0%,0%)",
         })
-         tl.to(".box2", {
+        tl.to(".box2", {
             ease: "expo.inOut",
             marginLeft: 0,
             duration: 1.1,
             ease: "expo.inOut",
         }, "<")
-        tl.to(".loader_box", {
+        tl.to(".loader_paren", {
             opacity: 0,
-            duration: 0.01
+            duration: 1,
+            ease: "expo.out",
+            onComplete: () => {
+                gsap.to(".loader_paren", { display: "none" })
+            }
         })
     })
     return (
-        <div className=" loader_box w-[25.5vw] fixed z-10000 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2   aspect-[2.7/1] flex items-center ">
+        <>
+            <div className="loader_paren pointer-events-none fixed inset-0 bg-[#f2f2f2] w-full h-screen z-100000">
+                <div className=" loader_box w-[25.5vw] fixed z-10000 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2   aspect-[2.7/1] flex items-center ">
 
-            <div
-                style={{
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
-                }} className=" box1 bg-[#0f1219] overflow-hidden w-[28%] h-full ">
+                    <div
+                        style={{
+                            clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
+                        }} className=" box1 bg-[#0f1219] overflow-hidden w-[28%] h-full ">
+                    </div>
+                    <div
+                        style={{
+                            clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
+                        }} className="box2 bg-[#0f1219] overflow-hidden -ml-px w-[40%] h-full">
+                    </div>
+                    <div
+                        style={{
+                            clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
+                        }} className="box2 bg-[#0f1219] overflow-hidden -ml-px w-[40%] h-full">
+                    </div>
+                </div>
             </div>
-            <div
-                style={{
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
-                }} className="box2 bg-[#0f1219] overflow-hidden -ml-px w-[40%] h-full">
-            </div>
-            <div
-                style={{
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)"
-                }} className="box2 bg-[#0f1219] overflow-hidden -ml-px w-[40%] h-full">
-            </div>
-        </div>
+        </>
     )
 }
 

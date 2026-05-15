@@ -31,7 +31,7 @@ const Header = () => {
         opacity: 1,
         duration: 0.5,
         ease: "power3.out",
-        delay: 2.75
+        delay: 3
       })
     } else {
       gsap.to(".header", { opacity: 1, duration: 0.5, ease: "power3.out", });
@@ -39,7 +39,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className=" header opacity-0 container bg-transparent! w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-10 pb-3.5 py-6">
+    <header className={`header opacity-0 container  w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-10 pb-3.5 py-6 ${pathname.startsWith("/news/") ? "bg-[#f2f2f2]" : "bg-transparent"}`}>
       <div className="grid grid-cols-2 md:grid-cols-4  items-start">
 
         <div className={` ${pathname === "/" && "pointer-events-none"} w-full`}>

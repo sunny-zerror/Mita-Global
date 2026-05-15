@@ -7,8 +7,10 @@ import HoverLink from './HoverLink'
 
 const Footer = () => {
   const pathname = usePathname()
-  const skipFlexImage =
-    pathname !== "/contact" && pathname !== "/news"
+  const skipFlexImage = !(
+    pathname === "/contact" ||
+    pathname.startsWith("/news")
+  );
   return (
     <>
       <div className="container space-y-1 px-1.25">

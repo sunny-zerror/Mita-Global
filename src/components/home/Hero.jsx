@@ -49,7 +49,7 @@ const Hero = () => {
     gsap.set([heading_split.lines, paragraph_split.lines], { yPercent: 100 });
 
     const tl = gsap.timeline({
-      delay: 2.75
+      delay: 3
     })
     tl.to(".content_box", {
       opacity: 1,
@@ -165,7 +165,7 @@ const Hero = () => {
             <video data-img-effect className='cover hue-rotate-354 saturate-[0.33]' loop muted playsInline autoPlay src="https://cdn.prod.website-files.com/66d5dc578fecb86ebbccb71c%2F66d6d93acbd84d209f5b5116_7065796-uhd_2160_3840_24fps-transcode.mp4"></video>
           </div>
           <div
-            className="h-screen relative w-full flex flex-col">
+            className="h-screen overflow-hidden relative w-full flex flex-col">
 
             <div className=" relative overflow-hidden flex-1">
               <img
