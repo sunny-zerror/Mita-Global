@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 import SplitText from 'gsap/dist/SplitText'
 import gsap from 'gsap'
 import HoverLink from '../common/HoverLink'
+import CardHover from '../animation/CardHover'
 gsap.registerPlugin(SplitText)
 
 const ServiceHero = () => {
@@ -61,51 +62,29 @@ const ServiceHero = () => {
     });
     return (
         <>
-            <div className="w-full h-screen relative">
-                <div className="container bg-[#F2F2F2]">
+            <div className="w-full  lg:h-screen relative">
+                <div className="container max-lg:pt-44 bg-[#F2F2F2]">
                     <div className=" relative z-100 flex flex-col justify-end w-full h-full">
-                        <div className="w-full grid p-10 pt-[5.2rem] pb-0  pointer-events-none grid-cols-4 z-10 absolute inset-0">
-                            <div className="border-l border_bar h-0  border-[#0f12191a]"></div>
-                            <div className="border-l border_bar h-0  border-[#0f12191a]"></div>
-                            <div className="border-l border_bar h-0  border-[#0f12191a]"></div>
-                            <div className="border-l border_bar h-0  border-[#0f12191a]"></div>
-                        </div>
-                        <div className=" content_box opacity-0 p-10 space-y-5 w-full">
+                        <div className=" content_box opacity-0 p-6 md:p-10  space-y-5 w-full">
                             <BlinkButton text='Our Services' theme='dark' className='blink_btn opacity-0' />
-                            <div className="grid grid-cols-4">
+                            <div className=" max-lg:space-y-4 w-full lg:grid grid-cols-4">
                                 <div className="col-span-3 ">
                                     <h1 className=' heading_split leading-none max-w-160 tracking-tight wrap-break-word'>Turning Ideas into Timeless Creations</h1>
                                 </div>
-                                <div className=" w-full  flex flex-col justify-between pl-2 col-span-1">
-                                    <p className=' paragraph_split text-sm  leading-tight w-[80%]'>We provide personalized services that integrate our expertise with innovative solutions to deliver remarkable results.</p>
-                                    <Button text="About us" className='blink_btn opacity-0 text-sm' />
+                                <div className=" w-full  max-lg:space-y-4 flex flex-col justify-between lg:pl-2 col-span-1">
+                                    <p className=' paragraph_split text-sm  leading-tight md:w-[80%]'>We provide personalized services that integrate our expertise with innovative solutions to deliver remarkable results.</p>
+                                    <Button text="About us" className=' max-sm:w-full! blink_btn text-sm opacity-0' />
                                 </div>
                             </div>
                         </div>
-                        <div className="grid relative z-10 px-1 grid-cols-4  w-full">
-                            <div className="grid_box overflow-hidden group relative opacity-0 col-span-2 p-7  w-[calc(100%-4px)] space-y-20 bg-[#0f1219e6] hover:bg-[#0f121980] transition-all duration-300 text-[#f2f2f2]">
-                                <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500  bg-[#f2f2f2] group-hover:top-3 group-hover:right-3 absolute"></div>
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500 border border-[#f2f2f2] group-hover:top-8 group-hover:right-4.5 absolute"></div>
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500 border border-[#f2f2f2] group-hover:top-4.5 group-hover:right-8 absolute"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute right-1 top-1 transition-all duration-500 h-px bg-[#f2f2f2] w-0  group-hover:w-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute right-1 top-1 transition-all duration-500 w-px bg-[#f2f2f2] h-0  group-hover:h-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute left-1 bottom-1 transition-all duration-500 h-px bg-[#f2f2f2] w-0  group-hover:w-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute left-1 bottom-1 transition-all duration-500 w-px bg-[#f2f2f2] h-0  group-hover:h-[calc(100%-8px)] z-10"></div>
-                                </div>
+                        <div className="md:grid relative z-10  md:px-1 grid-cols-4  w-full">
+                            <div className="grid_box overflow-hidden group relative opacity-0 col-span-2 p-7  md:w-[calc(100%-4px)] space-y-12 md:space-y-20 bg-[#0f1219e6] hover:bg-[#0f121980] transition-all duration-300 text-[#f2f2f2]">
+                                <CardHover />
                                 <HoverLink text='our projects' color='white' className='uppercase text-sm' />
                                 <p className='text-sm leading-none'>Explore our portfolio to see <br /> concepts come to life.</p>
                             </div>
-                            <div className="grid_box overflow-hidden group relative opacity-0 col-span-2 p-7 w-full space-y-20 bg-[#5a6b73] hover:opacity-85! transition-all duration-300 text-[#f2f2f2]">
-                                <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500  bg-[#f2f2f2] group-hover:top-3 group-hover:right-3 absolute"></div>
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500 border border-[#f2f2f2] group-hover:top-8 group-hover:right-4.5 absolute"></div>
-                                    <div className="size-2 group-hover:opacity-100 opacity-0  -top-7 -right-6 transition-all duration-500 border border-[#f2f2f2] group-hover:top-4.5 group-hover:right-8 absolute"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute right-1 top-1 transition-all duration-500 h-px bg-[#f2f2f2] w-0  group-hover:w-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute right-1 top-1 transition-all duration-500 w-px bg-[#f2f2f2] h-0  group-hover:h-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute left-1 bottom-1 transition-all duration-500 h-px bg-[#f2f2f2] w-0  group-hover:w-[calc(100%-8px)] z-10"></div>
-                                    <div className="hover_bar group-hover:opacity-100 opacity-0 absolute left-1 bottom-1 transition-all duration-500 w-px bg-[#f2f2f2] h-0  group-hover:h-[calc(100%-8px)] z-10"></div>
-                                </div>
+                            <div className="grid_box overflow-hidden group relative opacity-0 col-span-2 p-7 w-full space-y-12 md:space-y-20 bg-[#5a6b73] hover:opacity-85! transition-all duration-300 text-[#f2f2f2]">
+                                <CardHover />
                                 <HoverLink text='get in touch' color='white' className='uppercase text-sm' />
                                 <p className='text-sm leading-none'>Contact us to discuss your <br /> vision and bring it to life.</p>
                             </div>

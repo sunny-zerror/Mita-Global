@@ -38,23 +38,23 @@ const clientLogos = [
 
 const Clients = () => {
   return (
-    <div className="py-50 space-y-12 w-full flex flex-col text-center items-center justify-center">
+    <div className=" py-40 md:py-50  space-y-12 w-full flex flex-col text-center items-center justify-center">
       <BlinkButton text="Building your dreams" />
 
-      <div className="w-full grid grid-cols-5 gap-px max-w-240 mx-auto">
+      <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-px max-w-240 mx-auto">
         {clientLogos.map((logo, index) => (
           <div
             key={index}
             className="group relative p-7 bg-[#0f1219] hover:bg-[#0f1219b3] transition-all duration-300 center overflow-hidden"
           >
             <div
-            style={{
-                  maskImage:
-                    "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.33) 100%)",
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.33) 100%)",
-                }}
-                 className="absolute inset-0 z-10 pointer-events-none">
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.33) 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.33) 100%)",
+              }}
+              className="absolute inset-0 z-10 pointer-events-none">
 
               {/* Vertical Lines */}
               <div

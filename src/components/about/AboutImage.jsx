@@ -11,6 +11,7 @@ const AboutImage = ({ img }) => {
     const imgParentRef = useRef(null)
 
     useGSAP(() => {
+        if (window.innerWidth < 1024) return
         gsap.fromTo(".full_img", {
             y: -100
         }, {
@@ -23,12 +24,12 @@ const AboutImage = ({ img }) => {
                 scrub: true
             }
         })
-    },{scope: imgParentRef})
+    }, { scope: imgParentRef })
 
     return (
         <>
-            <div ref={imgParentRef}  className="container">
-                <div className="w-full overflow-hidden  aspect-video mt-1 ">
+            <div ref={imgParentRef} className="container">
+                <div className="w-full overflow-hidden  max-sm:h-140 md:aspect-video mt-1 ">
                     <img className=' full_img cover saturate-[0.33]' src={img} alt="" />
                 </div>
             </div>

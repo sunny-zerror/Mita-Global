@@ -101,17 +101,17 @@ const Faq = () => {
     };
 
     return (
-        <div className="container py-50 px-7">
-            <div className="w-full max-w-240 gap-y-20 flex flex-col text-center items-center mx-auto">
+        <div className="container py-40 md:py-50  px-5">
+            <div className="w-full max-w-240 gap-y-12 md:gap-y-20 flex flex-col text-center items-center mx-auto">
                 <div className="gap-y-6 items-center flex flex-col">
-                    <BlinkButton text="faq"  />
+                    <BlinkButton text="faq" />
 
-                    <h2  data-text-effect className="leading-none text-[#f2f2f2]">
+                    <h2 data-text-effect className="leading-none text-[#f2f2f2]">
                         Quick Answers to <br /> Common Questions
                     </h2>
                 </div>
 
-                <div className="w-full text-start gap-2 flex">
+                <div className="w-full text-start space-y-2 gap-2 md:flex">
                     <div className="space-y-2 flex-1">
                         {faqData.slice(0, faqData.length / 2).map((item, index) => (
                             <FaqItem

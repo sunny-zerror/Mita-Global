@@ -72,8 +72,8 @@ const resourcesData = [
 const ExpertHub = () => {
     return (
         <>
-            <div className="container py-50 px-7">
-                <div className="w-full max-w-240 space-y-20 mx-auto">
+            <div className="container py-40 md:py-50  px-5">
+                <div className="w-full max-w-240 space-y-12 md:space-y-20 mx-auto">
                     <div className="w-full flex items-end justify-between">
                         <div className="text-[#f2f2f2] space-y-4">
                             <BlinkButton text="Expert Hub" />

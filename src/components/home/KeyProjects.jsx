@@ -70,11 +70,11 @@ const KeyProjects = () => {
 
     return (
         <>
-            <div className="container px-7">
-                <div className="w-full max-w-298 gap-y-20 flex flex-col text-center items-center mx-auto">
+            <div className="container px-5">
+                <div className="w-full max-w-298 gap-y-12 md:gap-y-20 flex flex-col text-center items-center mx-auto">
                     <div className="gap-y-6 text-center justify-center items-center flex flex-col ">
                         <BlinkButton text="our projects" />
-                        <h2  data-text-effect className=' text-center leading-none text-[#f2f2f2]'>Innovative Projects, <br /> Lasting Impact</h2>
+                        <h2 data-text-effect className=' text-center leading-none text-[#f2f2f2]'>Innovative Projects, <br /> Lasting Impact</h2>
                         <Button text="view all projects" link='/marquee-projects' theme='light' />
                     </div>
                     <div className="space-y-1">
@@ -98,7 +98,7 @@ const KeyProjects = () => {
                                                     {project.title.split(" ").slice(4).join(" ")}
                                                 </h3>
 
-                                                <p className="text-sm leading-tight w-[80%]">
+                                                <p className="text-sm leading-tight md:w-[80%]">
                                                     {project.description}
                                                 </p>
                                             </div>
@@ -139,7 +139,7 @@ const KeyProjects = () => {
                                         </div>
                                     </div>
 
-                                    <div className="w-full  h-full relative shrink-0 max-sm:h-142 overflow-hidden md:w-1/2 xl:w-[60%]">
+                                    <div className="w-full  h-full relative shrink-0 max-sm:h-120 overflow-hidden md:w-1/2 xl:w-[60%]">
                                         <img
                                             data-img-effect
                                             className="cover saturate-[0.33]"

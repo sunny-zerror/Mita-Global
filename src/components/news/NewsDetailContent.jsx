@@ -29,19 +29,19 @@ const NewsDetailContent = () => {
     return (
         <div>
             <div className="container">
-                <div className="w-full mx-auto max-w-180 space-y-16  text-[#f2f2f2] py-50">
+                <div className="w-full mx-auto max-w-180 space-y-16  text-[#f2f2f2] py-40 md:py-50 ">
                     <div className="space-y-10 w-full">
-                    {newsContent.map((section, i) => (
-                        <div key={i} className="space-y-3">
-                            <h5 className=' uppercase'>{section.title}</h5>
+                        {newsContent.map((section, i) => (
+                            <div key={i} className="space-y-3">
+                                <h5 className=' uppercase'>{section.title}</h5>
 
-                            <div className="space-y-3">
-                                {section.paragraphs.map((para, index) => (
-                                    <p key={index}>{para}</p>
-                                ))}
+                                <div className="space-y-3">
+                                    {section.paragraphs.map((para, index) => (
+                                        <p key={index}>{para}</p>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                     </div>
                     <div className="w-full h-130 rounded-lg overflow-hidden ">
                         <img data-img-effect className='cover' src="	https://framerusercontent.com/images/NOotlyhPCixLZad4xPbo09F7Es.jpg?scale-down-to=2048" alt="" />

@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions";
-import React from "react";
+import React, { useState } from "react";
 import HoverLink from "./HoverLink";
 import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
@@ -21,6 +21,7 @@ const navItems = [
 ];
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false)
   const pathname = usePathname()
 
   useGSAP(() => {
@@ -39,36 +40,72 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className={`header opacity-0 container  w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-10 pb-3.5 py-6 ${pathname.startsWith("/news/") ? "bg-[#f2f2f2]" : "bg-transparent"}`}>
-      <div className="grid grid-cols-2 md:grid-cols-4  items-start">
-
-        <div className={` ${pathname === "/" && "pointer-events-none"} w-full`}>
-          <Link href="/">
-            <img
-              className="w-24 hover:opacity-65 transition-all duration-300 brightness-0 object-contain"
-              src="/logo.avif"
-              alt="Mita Logo"
-              loading="eager"
-            />
-          </Link>
+    <>
+      <div className={` ${openMenu ? "translate-y-0" : "-translate-y-full"}  overflow-hidden fixed w-full h-svh inset-0 z-1000 px-6 pt-18 flex flex-col justify-between bg-[#f2f2f2] md:hidden transition-all duration-500`}>
+        <div className="">
+          {navItems.map((group, index) => (
+            <div key={index} className="">
+              {group.map((item) => (
+                <Link
+                onClick={()=>setOpenMenu(false)}
+                  key={item.title}
+                  href={item.href}
+                  className={`block group mb-5 w-fit ${pathname === item.href && "pointer-events-none"}`}
+                >
+                  <HoverLink text={item.title} className="text-xl" />
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
 
-        {navItems.map((group, index) => (
-          <div key={index} className="space-y-2">
-            {group.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className={`block group w-fit ${pathname === item.href && "pointer-events-none"}`}
-              >
-                <HoverLink text={item.title} />
-              </Link>
-            ))}
+        <div className="space-y-6 mb-8">
+          <div className="w-full h-44 overflow-hidden">
+            <img className=" cover" src="https://framerusercontent.com/images/InuUf1oKyWrFPvFVsswebSw22SM.jpg?scale-down-to=1024" alt="" />
           </div>
-        ))}
-
+          <div className="w-full ">
+            <img className=" w-full" src="	https://framerusercontent.com/images/BlkjXbIDaBz9LJlBh6RYmdtQM7w.svg" alt="" />
+          </div>
+        </div>
       </div>
-    </header>
+      <header className={`header opacity-0 container  w-full absolute! h-fit! inset-0 z-1000 border-b border-[#0f12191a] px-6 md:px-10 pb-3.5 py-6 max-sm:bg-[#f2f2f2] ${pathname.startsWith("/news/") ? "bg-[#f2f2f2]" : "bg-transparent"}`}>
+        <nav className="grid grid-cols-2 md:grid-cols-4  items-start">
+
+          <div className={` ${pathname === "/" && "pointer-events-none"} w-full`}>
+            <Link href="/">
+              <img
+                className="w-24 hover:opacity-65 transition-all duration-300 brightness-0 object-contain"
+                src="/logo.avif"
+                alt="Mita Logo"
+                loading="eager"
+              />
+            </Link>
+          </div>
+
+          <div onClick={()=>setOpenMenu(!openMenu)} className=" flex justify-end md:hidden">
+            <button className="uppercase text-xs">
+              {openMenu ? "Close" : "Menu"}
+            </button>
+          </div>
+
+          {navItems.map((group, index) => (
+            <div key={index} className="space-y-2  hidden md:block">
+              {group.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className={`block group w-fit ${pathname === item.href && "pointer-events-none"}`}
+                >
+                  <HoverLink text={item.title} />
+                </Link>
+              ))}
+            </div>
+          ))}
+
+        </nav>
+      </header>
+    </>
+
   );
 };
 

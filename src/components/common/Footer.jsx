@@ -13,10 +13,10 @@ const Footer = () => {
   );
   return (
     <>
-      <div className="container space-y-1 px-1.25">
+      <div className="container space-y-1 md:px-1.25">
         {skipFlexImage && (
-          <div className="w-full flex min-h-180 gap-1 h-screen">
-            <div className="w-1/2 border overflow-hidden border-[#AACFDE] h-full relative py-20 px-6 ">
+          <div className="w-full md:flex md:min-h-180 max-sm:space-y-1 gap-1 md:h-screen">
+            <div className="md:w-1/2 border overflow-hidden border-[#AACFDE] h-full max-sm:h-140 relative py-20 px-6 ">
               <div className=" relative overflow-hidden z-10 gap-y-6 text-center items-center flex flex-col ">
                 <BlinkButton text="Our services" />
                 <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Your Vision,<br /> Our Expertise</h2>
@@ -31,7 +31,7 @@ const Footer = () => {
                 className="overlay absolute inset-px z-1 overflow-hidden"
               />
             </div>
-            <div className="w-1/2 border overflow-hidden border-[#9BC6DE] h-full relative py-20 px-6 ">
+            <div className="md:w-1/2 border overflow-hidden border-[#9BC6DE] h-full max-sm:h-140 relative py-20 px-6 ">
               <div className=" relative overflow-hidden z-10 gap-y-6 text-center items-center flex flex-col ">
                 <BlinkButton text="Contact us" />
                 <h2 data-text-effect className=' leading-none text-[#f2f2f2]'>Let's  Start the <br /> Conversation</h2>
@@ -49,17 +49,9 @@ const Footer = () => {
           </div>
         )}
 
-        <div className="w-full space-y-50 relative bg-[#f2f2f2] pb-3 p-10">
-
-          <div className="w-full grid px-10 h-full  pointer-events-none grid-cols-4 z-10 absolute inset-0">
-            <div className="border-l h-full border-[#0f12191a]"></div>
-            <div className="border-l h-full border-[#0f12191a]"></div>
-            <div className="border-l h-full border-[#0f12191a]"></div>
-            <div className="border-l h-full border-[#0f12191a]"></div>
-          </div>
-
-          <div className="w-full grid grid-cols-4">
-            <div className=" pl-2 flex flex-col justify-between">
+        <div className="w-full space-y-8 md:space-y-8 lg:space-y-50 relative bg-[#f2f2f2] md:pb-3 p-5 max-sm:py-8 md:p-10">
+          <div className="w-full grid gap-y-8 md:grid-cols-3 lg:grid-cols-4">
+            <div className=" order-last lg:order-0 md:col-span-3 lg:col-span-1 pl-2 mt-40 md:mt-50 lg:mt-0 md:grid grid-cols-3 lg:flex flex-col justify-between">
               <div className={` ${pathname === "/" && "pointer-events-none"} w-full space-x-5`}>
                 <Link href="/">
                   <img
@@ -69,9 +61,10 @@ const Footer = () => {
                     loading="eager"
                   />
                 </Link>
-                <p className='text-[#0f1219b3] uppercase text-xs leading-none w-1/2'>We create innovative architectural solutions that inspire and endure.</p>
+                <p className='text-[#0f1219b3] uppercase md:hidden lg:block text-xs leading-none md:w-1/2'>We create innovative architectural solutions that inspire and endure.</p>
               </div>
-              <p className='text-[#0f1219b3] uppercase text-xs leading-none w-1/2'>© {new Date().getFullYear()}, Mita</p>
+                <p className='text-[#0f1219b3] hidden md:block lg:hidden uppercase text-xs leading-none lg:w-1/2'>We create innovative architectural solutions that inspire and endure.</p>
+              <p className='text-[#0f1219b3] max-sm:mt-5 uppercase text-xs leading-none w-1/2'>© {new Date().getFullYear()}, Mita</p>
             </div>
 
             <div className="pl-3 space-y-4">

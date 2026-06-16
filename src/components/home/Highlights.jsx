@@ -32,33 +32,33 @@ const Highlights = () => {
 
     return (
         <>
-            <div className="container pt-50 px-7">
-                <div className="w-full max-w-240 space-y-20 mx-auto">
-                    <div className="w-full flex items-end justify-between">
+            <div className="container pt-40 md:pt-50 px-5">
+                <div className="w-full max-w-240 space-y-12 md:space-y-20 mx-auto">
+                    <div className="w-full max-sm:space-y-5 md:flex items-end justify-between">
                         <div className="text-[#f2f2f2] space-y-4">
                             <BlinkButton text="Highlights" />
-                            <h2  data-text-effect className='leading-none'>Why Choose Mita <br /> Group?</h2>
+                            <h2 data-text-effect className='leading-none'>Why Choose Mita <br /> Group?</h2>
                         </div>
                         <Button text="Get in Touch" link="/contact" theme='light' />
                     </div>
-                    <div className="w-full space-y-15">
+                    <div className="w-full space-y-8 xl:space-y-15">
                         {statsData.map((item) => (
                             <div
                                 key={item.id}
-                                className="w-full border-t border-[#f2f2f21a] flex"
+                                className="w-full border-t border-[#f2f2f21a] md:flex"
                             >
-                                <div className="w-[60%]">
-                                    <p  data-text-effect className="text-[10.5rem] leading-36 heading-font text-[#f2f2f233]">
+                                <div className="md:w-[60%]">
+                                    <p data-text-effect className=" text-[5rem] max-sm:leading-none md:text-[7.5rem] xl:text-[10.5rem] xl:leading-44 heading-font text-[#f2f2f233]">
                                         {item.number}
                                     </p>
                                 </div>
 
-                                <div className="w-[40%] py-4 flex flex-col justify-between text-[#f2f2f2]">
+                                <div className="md:w-[40%] py-4 flex flex-col justify-between text-[#f2f2f2]">
                                     <p className="uppercase font-medium text-base">
                                         {item.title}
                                     </p>
 
-                                    <p className="text-[#f2f2f2b3] text-sm leading-tight">
+                                    <p className="text-[#f2f2f2b3] text-sm max-sm:mt-2 leading-tight">
                                         {item.description}
                                     </p>
                                 </div>

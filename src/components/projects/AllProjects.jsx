@@ -89,8 +89,8 @@ const projectsData = [
 const AllProjects = () => {
     return (
         <>
-            <div className="container py-50 px-7">
-                <div className="w-full max-w-298 gap-y-20 flex flex-col text-center items-center mx-auto">
+            <div className="container py-40 md:py-50  px-5">
+                <div className="w-full max-w-298 gap-y-12 md:gap-y-20 flex flex-col text-center items-center mx-auto">
                     <div className="gap-y-6 items-center flex flex-col ">
                         <BlinkButton text="our projects" />
                         <h2 data-text-effect className=' text-center leading-none text-[#f2f2f2]'>Showcase of Our <br /> Design Excellence</h2>
@@ -159,7 +159,7 @@ const AllProjects = () => {
 
                                     <div className="w-full h-full relative shrink-0 max-sm:h-142 overflow-hidden md:w-1/2 xl:w-[60%]">
                                         <img
-                                        data-img-effect
+                                            data-img-effect
                                             className="cover saturate-[0.33]"
                                             src={project.cover_img}
                                             alt={project.title}

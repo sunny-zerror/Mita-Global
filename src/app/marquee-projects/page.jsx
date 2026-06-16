@@ -1,6 +1,7 @@
 import AboutImage from '@/components/about/AboutImage'
 import PageHero from '@/components/common/PageHero'
 import AllProjects from '@/components/projects/AllProjects'
+import { createPageMetadata } from '@/lib/seo'
 import React from 'react'
 
 const page = () => {
@@ -18,3 +19,7 @@ const page = () => {
 }
 
 export default page
+
+export async function generateMetadata() {
+  return createPageMetadata("/marquee-projects");
+}

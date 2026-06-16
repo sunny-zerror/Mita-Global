@@ -25,8 +25,8 @@ const featuresData = [
 const OurPurpose = () => {
   return (
     <>
-      <div className="container py-50">
-        <div className="w-full relative mx-auto max-w-298  h-[150svh] min-h-300 py-20 px-6">
+      <div className="container py-40 md:py-50 px-6 ">
+        <div className="w-full relative mx-auto max-w-298  md:h-[150svh] md:min-h-300 py-20 px-6">
 
           <div className="w-full flex gap-y-16  text-[#f2f2f2] flex-col justify-center items-center relative z-10">
             <div className="space-y-4 flex flex-col items-center">
@@ -40,7 +40,7 @@ const OurPurpose = () => {
                 return (
                   <div
                     key={index}
-                    className="  group gap-y-6   border border-[#f2f2f21a]   bg-[#f2f2f21a] px-6 py-7 flex flex-col items-center text-center" >
+                    className="  group gap-y-6   border border-[#f2f2f21a]   bg-[#f2f2f21a] backdrop-blur-sm px-6 py-7 flex flex-col items-center text-center" >
                     <div className="">
                       <img
                         src={item.icon}

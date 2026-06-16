@@ -43,18 +43,18 @@ export default function SiteLayout({ children }) {
         <GlobalImgReveal />
         <GlobalTextReveal />
         <div className="w-screen pointer-events-none h-screen fixed  z-100000">
-          <div className="border-5 border-[#acbbc2] w-full h-full"></div>
+          <div className="border-4 border-[#acbbc2] w-full h-full"></div>
         </div>
 
-        <header>
+        <header className="px-1">
           <Header />
         </header>
 
-        <main>
+        <main className="px-1">
           {children}
         </main>
 
-        <footer>
+        <footer className="px-1">
           <Footer />
         </footer>
       </LenisScroll>

@@ -7,13 +7,13 @@ const ContactForm = () => {
     return (
         <>
             <div className="container my-1">
-                <div className="w-full flex gap-1 items-stretch ">
-                    <div className="w-[calc(50%-4px)]">
-                        <div className="w-full h-full">
+                <div className="w-full flex max-sm:flex-col-reverse gap-1 md:items-stretch ">
+                    <div className=" w-full md:w-[calc(50%-4px)]">
+                        <div className="w-full overflow-hidden max-sm:h-140 h-full">
                             <img data-img-effect className='cover saturate-[0.33]' src="https://framerusercontent.com/images/mnJ2Ynf49fxGe22kCXEiF0H4Zg.jpg" alt="" />
                         </div>
                     </div>
-                    <div className="w-[calc(50%-4px)] bg-[#f2f2f2] space-y-8 h-full relative pt-8 pr-6 pb-12 pl-6">
+                    <div className=" w-full md:w-[calc(50%-4px)] bg-[#f2f2f2] space-y-8 h-full relative pt-8 pr-6 pb-12 pl-6">
                         <h2 data-text-effect className='leading-none'>Share Your <br />Vision with Us</h2>
                         <form className="space-y-6">
                             <div className="space-y-2">
