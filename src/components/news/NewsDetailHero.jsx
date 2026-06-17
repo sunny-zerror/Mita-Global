@@ -9,6 +9,7 @@ const NewsDetailHero = () => {
   const heroRef = useRef(null)
 
   useGSAP(() => {
+    if (window.innerWidth < 1020) return
     gsap.to(".hero_img", {
       y: 200,
       ease: "none",

@@ -33,7 +33,7 @@ const OtherNews = () => {
                         <Button text=" browse all" link="/news" theme='light' />
                     </div>
 
-                    <div className="w-full grid gap-1 grid-cols-2">
+                    <div className="w-full grid gap-1 grid-cols-1 md:grid-cols-2">
                         {news.map((item, index) => (
                             <Link href={`/news/${item.slug}`} key={index} className=" group cursor-pointer w-full flex flex-col items-stretch gap-1 ">
                                 <div className="h-120 overflow-hidden w-full">

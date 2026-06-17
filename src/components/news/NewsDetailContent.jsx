@@ -28,7 +28,7 @@ export const newsContent = [
 const NewsDetailContent = () => {
     return (
         <div>
-            <div className="container">
+            <div className="container px-6">
                 <div className="w-full mx-auto max-w-180 space-y-16  text-[#f2f2f2] py-40 md:py-50 ">
                     <div className="space-y-10 w-full">
                         {newsContent.map((section, i) => (
